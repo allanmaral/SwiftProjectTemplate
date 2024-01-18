@@ -13,11 +13,14 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/krzysztofzablocki/Difference.git", exact: "1.0.2"),
         .package(url: "https://github.com/realm/SwiftLint", exact: "0.52.3"),
+        .package(url: "https://github.com/krzysztofzablocki/Inject.git", exact: "1.2.4"),
     ],
     targets: [
         .target(
             name: "AppFeature",
-            dependencies: []
+            dependencies: [
+                "Inject",
+            ]
         ),
         .testTarget(
             name: "AppFeatureTests",
